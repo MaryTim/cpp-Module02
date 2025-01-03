@@ -2,11 +2,9 @@
 
 const int Fixed::fractBits = 8;
 
-Fixed::Fixed(): value_(0) {
-}
+Fixed::Fixed(): value_(0) { }
 
-Fixed::Fixed(const Fixed& other): value_(other.value_) {
-}
+Fixed::Fixed(const Fixed& other): value_(other.value_) { }
 
 Fixed& Fixed::operator=(const Fixed& other) {
     if (this != &other) {
@@ -39,11 +37,10 @@ int Fixed::toInt( void ) const {
     return value_ >> fractBits;
 }
 
-Fixed::~Fixed() {
-}
+Fixed::~Fixed() { }
 
 //comparison operators
-bool Fixed::operator<(const Fixed& other) const{
+bool Fixed::operator<(const Fixed& other) const {
 	return this->value_ < other.value_ ;
 }
 
